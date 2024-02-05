@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.create-trip-container {
+    font-size: large;
+    font-family: cursive;
+    color: black;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-trip-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    /* Add some spacing for select elements */
+}
+
+button {
+    width: 200px;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button2 {
+    margin-left: -475px;
+    height: fit-content;
+    /* margin-top: 39px; */
+    width: 179px;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-top: 22px; */
+    width: 13%;
+    margin-left: 160px;
+    margin-right: 0;
+}
+
+.button3 {
+    margin-left: 550px;
+    height: fit-content;
+    width: 179px;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.profile-image {
+    width: 172px;
+    height: 188px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-info {
+    height:90px;
+    margin-left: 25px;
+    /*flex-grow: 1;*/
+}
+
+.profile-info h2 {
+    margin: 0;
+    color: #333;
+}
+
+.trip-details {
+    text-align: right;
+}
+
+.trip-details h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.trip-details p {
+    margin: 0;
+    color: #555;
+}
+
+.Find-Traveller-container {
+    max-width: 1500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.Find-Traveller {
+    color: cadetblue;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Find-Traveller::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #3498db;
+    margin: 10px auto;
+}

@@ -1,0 +1,82 @@
+.trip-container {
+    /* Add margin to the container to separate each trip */
+    margin-bottom: 20px;
+}
+
+.trip-details {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align elements to the start (left) */
+    background-color: #fff;
+    width: 60rem;
+    text-align: center;
+}
+
+/* Style the "Join Trip" button */
+.button2 {
+    margin-top: 10px; /* Adjust the top margin to separate from "Trip Details" */
+    width: auto; /* Allow the button to adjust its width based on content */
+    margin-left: auto; /* Move the button to the right within its container */
+    margin-right: 0; /* Reset any right margin */
+}
+
+if (mysqli_num_rows($tripResult) > 0) {
+    while ($tripRow = mysqli_fetch_assoc($tripResult)) {
+        echo "<div class='trip-container'>";
+        echo "<div class='profile-container'>";
+        echo "<div class='profile-image'>";
+        echo "<img src='$profileImagePath' alt='Profile Picture'>";
+        echo "</div>";
+        echo "<div class='profile-info'>";
+        echo "<h2>{$profileRow['first_name']}</h2>";
+        echo "<h6>{$profileRow['email']}</h6>";
+        echo "</div>";
+        echo "</div>"; // Close the profile-container
+
+        // Display each trip in a separate container
+        echo "<div class='trip-details'>";
+        echo "<h5>Trip Details:</h5>";
+        echo "<p><strong>Destination:</strong> {$tripRow['Destination']}</p>";
+        echo "<p><strong>Date From:</strong> {$tripRow['Date_from']}</p>";
+        echo "<p><strong>Date To:</strong> {$tripRow['Date_to']}</p>";
+        echo "<p><strong>Accommodation:</strong> {$tripRow['Accomodation']}</p>";
+        echo "<p><strong>Budget:</strong> {$tripRow['Budget']}</p>";
+        echo "</div>";
+
+        echo "<button class='button2' onclick='joinTrip(\"{$profileRow['email']}\", {$tripRow['trip_id']})'><i class='fas fa-plus'></i>Join Trip</button>";
+
+        echo "</div>"; // Close the trip-container
+    }
+}
+
+
+if (mysqli_num_rows($tripResult) > 0) {
+    while ($tripRow = mysqli_fetch_assoc($tripResult)) {
+        echo "<div class='trip-container'>";
+        echo "<div class='profile-container'>";
+        echo "<div class='profile-image'>";
+        echo "<img src='$profileImagePath' alt='Profile Picture'>";
+        echo "</div>";
+        echo "<div class='profile-info'>";
+        echo "<h2>{$profileRow['first_name']}</h2>";
+        echo "<h6>{$profileRow['email']}</h6>";
+        echo "</div>";
+        echo "</div>"; // Close the profile-container
+
+        // Display each trip in a separate container
+        echo "<div class='trip-details'>";
+        echo "<h5>Trip Details:</h5>";
+        echo "<p><strong>Destination:</strong> {$tripRow['Destination']}</p>";
+        echo "<p><strong>Date From:</strong> {$tripRow['Date_from']}</p>";
+        echo "<p><strong>Date To:</strong> {$tripRow['Date_to']}</p>";
+        echo "<p><strong>Accommodation:</strong> {$tripRow['Accomodation']}</p>";
+        echo "<p><strong>Budget:</strong> {$tripRow['Budget']}</p>";
+        echo "</div>";
+
+        echo "<button class='button2' onclick='joinTrip(\"{$profileRow['email']}\", {$tripRow['trip_id']})'><i class='fas fa-plus'></i>Join Trip</button>";
+
+        echo "</div>"; // Close the trip-container
+    }
+}
